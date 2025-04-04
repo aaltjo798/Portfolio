@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-switch__checkbox" aria-label="Toggle theme">
+                <div class="theme-switch__container">
+                    <div class="theme-switch__circle-container">
+                        <div class="theme-switch__sun-moon-container">
+                            <div class="theme-switch__moon">
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="theme-switch__clouds"></div>
+                    <div class="theme-switch__stars-container">
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                        <div class="theme-switch__star"></div>
+                    </div>
+                </div>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1 class="animate-text">Jonne Aalto</h1>
+            <p class="animate-text-delay">Product-Obsessed Builder | Technical Expertise + Business Leadership</p>
+            <a href="/path/to/cv.pdf" class="cv-button animate-text-delay" download>
+                <i class="fas fa-download"></i> Download CV
+            </a>
+            <div class="social-icons animate-text-delay">
+                <a href="https://www.linkedin.com/in/jonne-aalto/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/aaltjo798" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://huggingface.co/Aaltjo" target="_blank" class="social-icon">
+                    <i class="fas fa-face-smile"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="tab-container">
+                <div class="toggle-container">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="tab-toggle">
+                        <label for="tab-toggle">
+                            <span class="toggle-label">Career</span>
+                            <span class="toggle-label">Skills</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="career">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="year">2024 - Current</div>
+                                <h3>IT Consultant</h3>
+                                <p>Working with a VC and building cool stuff at Let's Pickle Finland Oy and Flow4Events Oy</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2023 - 2024</div>
+                                <h3>Co-Founder & COO</h3>
+                                <p>Lahjakamu Oy, Business gifting platform</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2022 - 2023</div>
+                                <h3>Co-Founder</h3>
+                                <p>Voltaco Oy, Finnish electric car charging company</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2018 - 2022</div>
+                                <h3>Electric Car Charging Specialist</h3>
+                                <p>Tehomen Oy, Finnish electric car charging company</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="year">2017 - 2018</div>
+                                <h3>Intern & Summer Trainee</h3>
+                                <p>Sonepar, Electric equipment company</p>
+                            </div>
+                        </div>
+                        <div class="education-section">
+                            <h3>Education</h3>
+                            <div class="timeline-item">
+                                <div class="year">Business College Helsinki</div>
+                                <h3>Specialist Qualification</h3>
+                                <p>Management and Business Administration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="skills">
+                        <div class="skills-container">
+                            <div class="tech-skills">
+                                <h3>Technical Skills</h3>
+                                <div class="tech-carousel">
+                                    <div class="tech-grid">
+                                        <div class="tech-item">
+                                            <i class="fab fa-html5"></i>
+                                            <span>HTML5</span>
+                                        </div>
+                                        <div class="tech-item">
+                                            <i class="fab fa-css3-alt"></i>
+                                            <span>CSS3</span>
+                                        </div>
+                                        <div class="tech-item">
+                                            <i class="fab fa-python"></i>
+                                            <span>Python</span>
+                                        </div>
+                                        <div class="tech-item">
+                                            <i class="fab fa-figma"></i>
+                                            <span>Figma</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personal-skills">
+                                <h3>Personal Skills</h3>
+                                <div class="skill-list">
+                                    <div class="skill-item">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="skill-content">
+                                            <h4>Team Leadership</h4>
+                                            <p>I'm not about bossing people around. I've found that when I'm clear about what we need to get done and jump in to help clear obstacles, people actually want to deliver their best work.</p>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-lightbulb"></i>
+                                        </div>
+                                        <div class="skill-content">
+                                            <h4>Strategic Thinking</h4>
+                                            <p>I'm good at connecting the dots between what we're doing now and where we need to go. I can switch between focusing on today's fires and keeping an eye on next quarter's goals.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-puzzle-piece"></i>
+                                        </div>
+                                        <div class="skill-content">
+                                            <h4>Problem Solving</h4>
+                                            <p>When stuff gets messy, I don't panic. I break it down, figure out what's actually important, and find practical ways forward that don't require superhuman effort.</p>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-search"></i>
+                                        </div>
+                                        <div class="skill-content">
+                                            <h4>Deep Research</h4>
+                                            <p>Before diving into solutions, I do my homework. I dig through different sources to really understand what's going on instead of just going with what seems obvious at first glance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card golden-project">
+                    <div class="project-card-content">
+                        <img src="images/Chat-With-PDF.png" alt="Chat with PDF">
+                        <h3>Chat with PDF</h3>
+                        <p>Fully locally running safe and secure chat with PDF files even without internet connection.</p>
+                        <a href="https://github.com/aaltjo798/ChatWithPDF" target="_blank" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <img src="images/124M.png" alt="Trained my own AI">
+                        <h3>124M parameter AI model</h3>
+                        <p>I trained my own 124-Million parameter AI model with a single RTX 3060 GPU</p>
+                        <a href="https://huggingface.co/Aaltjo/gpt2-124M-openwebtext-alpacha" target="_blank" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <img src="images/workforce.png" alt="Build Your Personal AI Workforce">
+                        <h3>Build Your Personal AI Workforce</h3>
+                        <p>AI mini-workers, built for your needs, automate your daily tasks in real-time. Watch them in action and focus on what really matters.</p>
+                        <a href="#" class="learn-more" onclick="showNdaPopup(); return false;">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <img src="images/gifting.png" alt="Figma Prototype">
+                        <h3>Figma Prototype | Business Gifting Platform</h3>
+                        <p>I made a fully clickable figma prototype of a business gifting platform</p>
+                        <a href="#" class="learn-more" onclick="showNdaPopup(); return false;">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <img src="images/PRD.png" alt="Chat with PDF">
+                        <h3>Large product requirements document</h3>
+                        <p>I made a large product requirements document for a client</p>
+                        <a href="#" class="learn-more" onclick="showNdaPopup(); return false;">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <img src="images/Chat-With-PDF.png" alt="Trained my own AI">
+                        <h3>124M parameter AI model</h3>
+                        <p>I trained my own 124-Million parameter AI model with a single RTX 3060 GPU</p>
+                        <a href="https://huggingface.co/Aaltjo/gpt2-124M-openwebtext-alpacha" target="_blank" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- NDA Popup Container -->
+    <div class="nda-popup" id="ndaPopup">
+        <div class="nda-popup-content">
+            <button class="nda-popup-close" aria-label="Close popup">&times;</button>
+            <h3>Project Under NDA</h3>
+            <p>This project is currently under a Non-Disclosure Agreement (NDA). I apologize, but I cannot share the details or code of this project at this time.</p>
+            <p>If you're interested in learning more about my work, please feel free to check out my other projects or contact me directly.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#00bfff'
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: false
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'bounce',
+                    bounce: true,
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: false
+                    },
+                    onclick: {
+                        enable: false
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
