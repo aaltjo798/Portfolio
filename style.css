@@ -33,7 +33,6 @@ body {
     min-height: 100vh;
     color: var(--text-color);
     transition: var(--transition);
-    cursor: none !important;
 }
 
 /* Remove cursor styles */
@@ -472,124 +471,57 @@ footer {
     /* Timeline Mobile */
     .timeline {
         position: relative;
-        padding: 2rem 0;
-        margin: 0 auto;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
-
     .timeline::before {
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 2px;
-        background: var(--secondary-color);
+        left: 0.5rem !important;
     }
-
-    .timeline-item {
-        width: 100%;
-        margin-bottom: 3rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .timeline-item:nth-child(odd) {
-        padding-right: calc(50% + 2.5rem);
-        padding-left: 1rem;
-        text-align: right;
-    }
-
+    .timeline-item,
     .timeline-item:nth-child(even) {
-        padding-left: calc(50% + 2.5rem);
-        padding-right: 1rem;
-        text-align: left;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 2rem !important;
+        padding-right: 0 !important;
+        text-align: left !important;
     }
-
     .timeline-item::before {
-        width: 1.5rem;
-        height: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--secondary-color);
-        border: 3px solid var(--primary-color);
-        box-shadow: 0 0 10px var(--secondary-color);
-        z-index: 2;
+        left: calc(0.5rem - 0.5rem) !important;
+        top: 0 !important;
     }
-
-    .timeline-item .year {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        color: var(--secondary-color);
-        position: relative;
-    }
-
-    .timeline-item h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
-    }
-
+    .timeline-item .year,
+    .timeline-item h3,
     .timeline-item p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        opacity: 0.9;
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+    .timeline-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.95;
         margin: 0;
     }
-
-    /* Education section specific styles */
-    .education-section {
-        margin-top: 3rem;
-        padding: 0 1rem;
-    }
-
-    .education-section h3 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-        color: var(--primary-color);
-    }
-
     .education-section .timeline-item {
-        background: var(--card-bg);
-        border-radius: var(--radius);
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-        width: 100%;
-        max-width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding-left: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
-
     .education-section .timeline-item::before {
-        display: none;
+        left: calc(0.5rem - 0.5rem) !important;
+        top: 0 !important;
     }
-
-    .education-section .timeline-item:nth-child(odd),
-    .education-section .timeline-item:nth-child(even) {
-        padding: 1.5rem;
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .education-section .year {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-bottom: 0.75rem;
-        color: var(--secondary-color);
-    }
-
-    .education-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
-    }
-
-    .education-section p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin: 0;
-        opacity: 0.9;
+    .education-section .timeline-item .year,
+    .education-section .timeline-item h3,
+    .education-section .timeline-item p {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 
     /* Hide custom cursor on mobile */
@@ -1544,5 +1476,95 @@ body.light-mode .education-section .timeline-item:hover {
 
     .social-icon {
         font-size: 1.2rem;
+    }
+}
+
+/* Cursor styles - only show on desktop */
+@media (min-width: 769px) {
+    body {
+        cursor: none !important;
+    }
+
+    .cursor, .cursor-follower {
+        display: block;
+    }
+
+    a, button, input, .tech-item {
+        cursor: none;
+    }
+
+    a:hover ~ .cursor,
+    button:hover ~ .cursor,
+    input:hover ~ .cursor,
+    .tech-item:hover ~ .cursor {
+        transform: scale(1.5);
+    }
+
+    a:hover ~ .cursor-follower,
+    button:hover ~ .cursor-follower,
+    input:hover ~ .cursor-follower,
+    .tech-item:hover ~ .cursor-follower {
+        transform: scale(1.5);
+    }
+}
+
+/* Mobile cursor styles */
+@media (max-width: 768px) {
+    body {
+        cursor: auto !important;
+    }
+
+    .cursor, .cursor-follower {
+        display: none !important;
+    }
+
+    a, button, input, .tech-item {
+        cursor: pointer !important;
+    }
+
+    /* Rest of mobile styles... */
+}
+
+@media (max-width: 768px) {
+    .tab-content,
+    .tab-pane,
+    .timeline {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .timeline-item {
+        padding-left: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    .timeline-item .year,
+    .timeline-item h3,
+    .timeline-item p {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+    .timeline-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0.95;
+        margin: 0;
+    }
+    .education-section .timeline-item {
+        padding-left: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .education-section .timeline-item .year,
+    .education-section .timeline-item h3,
+    .education-section .timeline-item p {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 }
